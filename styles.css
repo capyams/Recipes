@@ -9,7 +9,7 @@ html {
 
 body {
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #f2f2f2;
 }
 
 h1, h2, h3, nav a, nav span, menu li, #social li, footer {
@@ -28,11 +28,15 @@ nav a, nav span, menu li, #social li, footer {
 h1 {
     font-size: 40px;
     text-align: center;
+    margin-top: 180px;
+    padding-top: 10px;
+    margin-bottom: 0px;
 }
 
 h2 {
     font-size: 30px;
     text-align: center;
+    margin: 0;
 }
 
 h3 {
@@ -44,43 +48,268 @@ img {
     height: auto;
 }
 
-nav ul {
-    display: flex;
-    flex-flow: row nowrap;
-    list-style: none;
-    justify-content: space-around;
-    padding-left: 0;
-    margin: 0;
-}
-
-nav li {
-    top: 0;
-    display: block;
-    
-}
-
-nav a {
-    display: block;
-    bottom: 0;
-    position: relative;
-    top: 30px;
-    text-align: center;
-    color: #EB5428;
-    text-decoration: none;
-    
-}
-
-nav svg {
-    display: block;
-    position: relative;
-    bottom: 40px;
-}
-
-nav li:last-child svg {
-    padding-left: 25px;
-}
-
 main p {
     padding: 0 10px;
 }
 
+dl {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    margin-top: 0;
+}
+
+dt {
+    grid-column-start: 1;
+    font-weight: bold;
+    padding: 3px 5px;
+}
+
+dd {
+    grid-column-start: 2;
+    margin: 0;
+}
+
+ul li {
+ padding-bottom: 10px;
+}
+
+ol li {
+    padding-bottom: 15px;
+}
+
+.side {
+    background-color: #7ABFBF;
+    padding: 10px;
+}
+
+.side img {
+    width: 100px;
+    height: auto;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.side div{
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    margin: 45px 0;
+}
+
+.side h3, .side p {
+    grid-column-start: 2;
+    padding: 0;
+}
+
+.side h3 {
+    margin: 0 0 10px 0;
+}
+
+.side p {
+    height: 20px;
+    margin: auto 0;
+    
+}
+
+.side div p:last-child {
+    font-weight: bold;
+}
+
+.side svg {
+    padding: 3px 2px;
+}
+
+.mainnav {
+    text-align: left;
+    width: 414px;
+    position: absolute;
+    top: 0;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 90px;
+    background-color: #f2f2f2;
+    z-index: 5;
+    box-shadow: 0px 5px 6px #c0c0c0;
+}
+
+menu {
+    text-align: center;
+    width: 100%;
+    background-color: #EB5428;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+    background-color: #EB5428;
+    padding-top: 70px;
+}
+
+.hidden li{
+    padding: 5px 0;
+}
+
+menu li {
+    text-decoration: none;
+    margin: 0;
+    display: block;
+}
+
+label {
+    margin: 0 auto;
+    line-height: 70px;
+    display: block;
+    cursor: pointer;
+    grid-column-start: 1;
+}
+
+label svg {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburger:checked + menu .hidden {
+    display: grid;
+    grid-column: 2 / 3; 
+    visibility: visible;
+}
+
+menu img {
+    width: 0;
+    height: 0;
+}
+
+.avatar {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+.logo {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 180px;
+}
+
+.search {
+    position: absolute;
+    top: 90px;
+    width: 414px;
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+
+.search h3 {
+    display: none;
+}
+
+button {
+    border: #EB5428 solid 2px;
+    background-color: #EB5428;
+}
+
+.search input {
+    height: 51px;
+    border:#EB5428 solid 2px;
+    width: 300px;
+}
+
+.search label {
+    display: none;
+}
+
+#social li{
+    color: #EB5428;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 20px;
+    width: auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+#social svg {
+    grid-row: 1/2;
+    justify-self: center;
+}
+
+#social h3, #social h2{
+    display: none;
+}
+
+#social ul {
+    padding-left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+nav li{
+    color: #EB5428;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 20px;
+    width: auto;
+    text-align: center;
+    top: 0;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color:#EB5428;
+}
+
+nav svg {
+    grid-row: 1/2;
+    justify-self: center;
+}
+
+nav ul {
+    padding-left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+footer h3 {
+    display: none;
+}
+
+footer {
+    padding: 5px 0;
+    text-align: center;
+    display: flex;
+    flex-flow: column-reverse;
+    font-weight: bold;
+}
+
+footer img {
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:768px) and (max-width:1279px) {
+    html, .search, .mainnav {
+        width: 768px;
+    }
+
+
+}
