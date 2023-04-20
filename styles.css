@@ -382,7 +382,7 @@ footer {
 
 footer section:last-of-type {
     display: grid;
-    grid-template-rows: 200px 20px 20px;
+    grid-template-rows: 200px auto auto;
 }
 
 #Jump ul {
